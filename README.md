@@ -1,1 +1,3 @@
-Creating the classic Rock Paper Scissors game using HTML , CSS and basic Javascript.
+Rock Paper Scissors game where you play against the computer.
+
+Live: https://mujtaba500.github.io/rock-paper-scissors/
