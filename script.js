@@ -7,14 +7,18 @@ Array.from(playerSels).forEach(element => element.addEventListener('click', game
 let winCounter = 0
 let lossCounter = 0
 
-function game(event){
+function playerInput(input){
+    playerSelection = input
+}
+
+function game(){
         if( winCounter >= 5){
         result.textContent = "Congrats! You are the winner!";
-        return;
+         return;
         }
         else if( lossCounter >= 5){
             result.textContent = "You just lost to a machine! That's just sad";
-            return;
+             return;
         }
         function getComputerChoice(){  // randomly generated answer by computer
             let x = Math.floor(Math.random() * 3)
@@ -30,14 +34,6 @@ function game(event){
         }
         
          computerSelection = getComputerChoice()
-
-         if(event.target.classList.contains('rock')){
-            playerSelection = 'rock'
-         } else if(event.target.classList.contains('paper')){
-            playerSelection = 'paper'
-         } else{
-            playerSelection = 'scissors'
-         }
 
     if( computerSelection === "rock" && playerSelection === "scissors" ){
         result.textContent = "You LOST this round! Rock beats Scissors" 
